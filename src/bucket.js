@@ -47,6 +47,8 @@ class Bucket {
     try {
       await this.connection.createBucket(params).promise()
     } catch (e) {
+      // we want to view the "original"/"nested" aws error
+      console.error(e);
       error(`Bucket: ${this.name} could not be created.`)
       throw new Error(`AWS Error: ${e.toString()}`)
     }
