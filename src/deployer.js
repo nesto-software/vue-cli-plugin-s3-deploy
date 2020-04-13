@@ -4,7 +4,7 @@ import fs from 'fs'
 import zlib from 'zlib'
 import { info, error, logWithSpinner, stopSpinner } from '@vue/cli-shared-utils'
 
-import AWS from 'aws-sdk'
+import AWS from '@nesto/aws-sdk'
 import PromisePool from 'es6-promise-pool'
 
 import Bucket from './bucket'
