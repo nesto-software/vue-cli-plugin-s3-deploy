@@ -33,7 +33,7 @@ class Configuration {
       staticErrorPage: Joi.string().default('index.html'),
       staticWebsiteConfiguration: Joi.object(),
       assetPath: Joi.string().default('dist'),
-      assetMatch: Joi.string().default('**'),
+      assetMatch: Joi.array().default(['**']),
       deployPath: Joi.string().default('/'),
       acl: Joi.string().default('public-read'),
       pwa: Joi.boolean().default(false),
